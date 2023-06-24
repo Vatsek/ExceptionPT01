@@ -13,6 +13,9 @@ public class TaskStar {
 
     }
     public static ArrayList<Integer> devideArray (int[] arr1, int[] arr2) {
+        if (arr1 == null || arr2 == null) {
+            throw new RuntimeException("Object is null");
+        }
         if (arr1.length < 1 || arr2.length < 1) {
             throw new RuntimeException("Один из массивов пуст");
         } else if (arr1.length != arr2.length) {
